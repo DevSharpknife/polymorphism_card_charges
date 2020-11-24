@@ -1,4 +1,7 @@
 import org.junit.Before;
+import org.junit.Test;
+
+import static org.junit.Assert.assertEquals;
 
 public class GiftCardTest {
 
@@ -6,8 +9,22 @@ public class GiftCardTest {
 
     @Before
     public void before(){
-        giftCard = new GiftCard
+        giftcard = new GiftCard("Zara", 50.00);
+    };
+
+    @Test
+    public void hasBrand(){
+        assertEquals("Zara", giftcard.getBrand());
     }
 
+    @Test
+    public void hasBalance(){
+        assertEquals(50.00, giftcard.getBalance(), 0.01);
+    }
 
+    @Test
+    public void canReduceBalance(){
+        giftcard.reduceBalance(10.00);
+        assertEquals(40.00, giftcard.getBalance(), 0.01);
+    }
 }

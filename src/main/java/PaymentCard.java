@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 
-public abstract class PaymentCard implements IPay{
+public abstract class PaymentCard {
 
     private String cardNumber;
     private String expiryDate;

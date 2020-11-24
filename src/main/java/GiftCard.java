@@ -1,4 +1,4 @@
-public class GiftCard implements IPay {
+public class GiftCard {
 
     private String brand;
     private double balance;
@@ -16,9 +16,14 @@ public class GiftCard implements IPay {
         return balance;
     }
 
-    public int reduceAmount(){
-
+    public double reduceBalance(double charge){
+        return this.balance -= charge;
     }
 
-    public 
+    // @Override
+    // public double getTransactionFee(){
+    //     this.transactionFee = 0;
+    // }
+
+
 }
