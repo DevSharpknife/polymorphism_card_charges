@@ -24,7 +24,12 @@ public class GiftCardTest {
 
     @Test
     public void canReduceBalance(){
-        giftcard.reduceBalance(10.00);
+        giftcard.charge(10.00);
         assertEquals(40.00, giftcard.getBalance(), 0.01);
+    }
+
+    @Test
+    public void noTransactionFee(){
+        assertEquals(0, giftcard.getTransactionFee(50.00), 0.01);
     }
 }
